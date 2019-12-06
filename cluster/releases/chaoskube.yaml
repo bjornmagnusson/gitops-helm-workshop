@@ -1,0 +1,13 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: chaoskube
+  namespace: prod
+  annotations:
+    fluxcd.io/ignore: "false"
+spec:
+  releaseName: chaoskube
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: chaoskube
+    version: 3.1.3
